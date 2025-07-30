@@ -1,8 +1,9 @@
 import React from "react";
 import { Button } from "./ui/button";
-import { ArrowDownIcon, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import profile from "./assets/justin.JPEG"
+import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 
 interface HeroSectionProps {
   name?: string;
@@ -10,23 +11,16 @@ interface HeroSectionProps {
   introduction?: string;
   profileImage?: string;
   resumeUrl?: string;
+  linkedInUrl?: string;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
   name = "Justin Johnson",
   title = "Full Stack Developer",
   introduction = "Experienced software developer with 3.6 years of expertise in React, Node.js, and AWS. I am skilled in TypeScript, GraphQL, PostgreSQL, and modern tools like Stripe, Shopify, and NetSuite. Recognized for strong organizational skills and dedication to delivering quality solutions.",
-  resumeUrl = "/resume.pdf",
+  linkedInUrl = "https://www.linkedin.com/in/justin-johnson-2179b91a9",
+
 }) => {
-  const handleDownloadResume = () => {
-    const link = document.createElement("a");
-    link.href = resumeUrl;
-    link.download = "Justin_Johnson_Resume.pdf";
-    link.target = "_blank";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   return (
     <section className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 min-h-screen flex items-center justify-center py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
@@ -82,32 +76,39 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            <Button
-              size="lg"
-              className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              onClick={handleDownloadResume}
+            <a
+              href={linkedInUrl}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <ArrowDownIcon size={20} />
-              Download Resume
-            </Button>
-
-            <Button
-              variant="outline"
-              size="lg"
-              className="flex items-center gap-2 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105"
-              onClick={() => {
-                const contactSection = document.getElementById("contact");
-                contactSection?.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              <a
-                href="mailto:justinjohnson.ae@gmail.com"
-                className="hover:underline"
+              <Button
+                size="lg"
+                className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
+                <LinkedInLogoIcon />
+                Connect With Me
+              </Button>
+            </a>
+
+            <a
+              href="mailto:justinjohnson.ae@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                size="lg"
+                className="flex items-center gap-2 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105"
+                onClick={() => {
+                  const contactSection = document.getElementById("contact");
+                  contactSection?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+
                 <Mail size={20} />
-              </a>
-              Contact Me
-            </Button>
+                Contact Me
+              </Button>
+            </a>
           </motion.div>
 
           <motion.div
@@ -171,7 +172,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
         </motion.div>
       </div>
-    </section>
+    </section >
   );
 };
 
