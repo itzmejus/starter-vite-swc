@@ -13,6 +13,7 @@ export default defineConfig({
     react(),
     tempo(),
   ],
+  assetsInclude: ['**/*.JPEG', '**/*.jpeg', '**/*.JPG', '**/*.jpg'],
   resolve: {
     preserveSymlinks: true,
     alias: {
