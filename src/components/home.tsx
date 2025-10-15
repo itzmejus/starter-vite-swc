@@ -23,7 +23,7 @@ const HomePage = () => {
     phone: "+971-502-300-557",
     linkedin: "https://www.linkedin.com/in/justin-johnson-2179b91a9",
     about:
-      "Experienced software developer with 3.6 years of expertise in React, Node.js, and AWS. I am skilled in TypeScript, GraphQL, PostgreSQL, and modern tools like Stripe, Shopify, and NetSuite. Recognized for strong organizational skills and dedication to delivering quality solutions. Ready to contribute effectively to innovative projects.",
+      "Experienced software developer with 4+ years of expertise in React, Node.js, and AWS. I am skilled in TypeScript, GraphQL, PostgreSQL, and modern tools like Stripe, Shopify, and NetSuite. Recognized for strong organizational skills and dedication to delivering quality solutions. Ready to contribute effectively to innovative projects.",
     experience: [
       {
         company: "GADGEON SYSTEMS INC – Kochi",
