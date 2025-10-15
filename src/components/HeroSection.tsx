@@ -17,7 +17,7 @@ interface HeroSectionProps {
 const HeroSection: React.FC<HeroSectionProps> = ({
   name = "Justin Johnson",
   title = "Full Stack Developer",
-  introduction = "Experienced software developer with 4+ years of expertise in React, Node.js, and AWS. I am skilled in TypeScript, GraphQL, PostgreSQL, and modern tools like Stripe, Shopify, and NetSuite. Recognized for strong organizational skills and dedication to delivering quality solutions.",
+  introduction = "Experienced software developer with 4+ years of expertise in React, Next.js, Node.js, and AWS. I am skilled in TypeScript, GraphQL, PostgreSQL, and modern tools like Stripe, Shopify, and NetSuite. Recognized for strong organizational skills and dedication to delivering quality solutions.",
   linkedInUrl = "https://www.linkedin.com/in/justin-johnson-2179b91a9",
 
 }) => {
@@ -118,7 +118,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             transition={{ duration: 0.6, delay: 1.0 }}
           >
             <MapPin size={18} className="text-blue-600" />
-            <span className="font-medium">Abu Dhabi, UAE</span>
+            <span className="font-medium">Dubai, UAE</span>
           </motion.div>
         </motion.div>
 
@@ -157,7 +157,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               transition={{ duration: 0.5, delay: 1.2 }}
               whileHover={{ scale: 1.1 }}
             >
-              <span className="font-semibold text-sm">3.6+ Years</span>
+              <span className="font-semibold text-sm">4+ Years</span>
             </motion.div>
 
             {/* Status indicator */}

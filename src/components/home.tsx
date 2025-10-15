@@ -13,17 +13,19 @@ import TeamOut2 from "./assets/TeamOut2.JPEG"
 import TeamOut3 from "./assets/TeamOut3.JPEG"
 import TeamOut4 from "./assets/TeamOut4.JPEG"
 import WorkDesk from "./assets/WorkDesk.JPEG"
+import AbuDhabi from "./assets/AbuDhabi.JPEG"
+import Dubai from "./assets/Dubai.JPEG"
 
 const HomePage = () => {
   const resumeData = {
     name: "Justin Johnson",
     title: "Full Stack Developer",
-    location: "Abu Dhabi - UAE",
+    location: "Dubai - UAE",
     email: "justinjohnson.ae@gmail.com",
     phone: "+971-502-300-557",
     linkedin: "https://www.linkedin.com/in/justin-johnson-2179b91a9",
     about:
-      "Experienced software developer with 4+ years of expertise in React, Node.js, and AWS. I am skilled in TypeScript, GraphQL, PostgreSQL, and modern tools like Stripe, Shopify, and NetSuite. Recognized for strong organizational skills and dedication to delivering quality solutions. Ready to contribute effectively to innovative projects.",
+      "Experienced software developer with 4+ years of expertise in React, Next.js, Node.js, and AWS. I am skilled in TypeScript, GraphQL, PostgreSQL, and modern tools like Stripe, Shopify, and NetSuite. Recognized for strong organizational skills and dedication to delivering quality solutions. Ready to contribute effectively to innovative projects.",
     experience: [
       {
         company: "GADGEON SYSTEMS INC – Kochi",
@@ -166,7 +168,19 @@ const HomePage = () => {
       id: 8,
       src: WorkDesk,
       alt: "Modern office space",
-      caption: "Work Desk",
+      caption: "Work Desk at Gadgeon",
+    },
+    {
+      id: 9,
+      src: AbuDhabi,
+      alt: "Work desk at abu dhabbi",
+      caption: "Work Desk at Abu Dhabi",
+    },
+    {
+      id: 10,
+      src: Dubai,
+      alt: "Work desk at Dubai",
+      caption: "Work Desk at Dubai",
     },
   ];
 
