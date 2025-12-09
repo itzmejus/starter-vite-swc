@@ -118,7 +118,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             transition={{ duration: 0.6, delay: 1.0 }}
           >
             <MapPin size={18} className="text-blue-600" />
-            <span className="font-medium">Dubai, UAE</span>
+            <span className="font-medium">Abu Dhabi, UAE</span>
           </motion.div>
         </motion.div>
 

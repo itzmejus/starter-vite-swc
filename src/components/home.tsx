@@ -15,12 +15,14 @@ import TeamOut4 from "./assets/TeamOut4.JPEG"
 import WorkDesk from "./assets/WorkDesk.JPEG"
 import AbuDhabi from "./assets/AbuDhabi.JPEG"
 import Dubai from "./assets/Dubai.JPEG"
+import GWD_Abu_Dhabi from "./assets/GWG-Abu-Dhabi.jpeg"
+import Projects from "./MyProjects";
 
 const HomePage = () => {
   const resumeData = {
     name: "Justin Johnson",
     title: "Full Stack Developer",
-    location: "Dubai - UAE",
+    location: "Abu Dhabi - UAE",
     email: "justinjohnson.ae@gmail.com",
     phone: "+971-502-300-557",
     linkedin: "https://www.linkedin.com/in/justin-johnson-2179b91a9",
@@ -182,6 +184,12 @@ const HomePage = () => {
       alt: "Work desk at Dubai",
       caption: "Work Desk at Dubai",
     },
+    {
+      id: 11,
+      src: GWD_Abu_Dhabi,
+      alt: "Work desk at Total Properties Abu Dhabi",
+      caption: "Work Desk at Total Properties Abu Dhabi",
+    },
   ];
 
   return (
@@ -293,6 +301,17 @@ const HomePage = () => {
             <ExperienceSection />
           </section>
 
+          <Separator className="my-16" />
+          {/* Project Section */}
+          <section id="projects" className="py-16">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold bg-gradient-to-r from-slate-900 to-blue-800 bg-clip-text text-transparent mb-4">
+                My Works
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
+            </div>
+            <Projects />
+          </section>
           <Separator className="my-16" />
 
           {/* Photo Gallery */}
